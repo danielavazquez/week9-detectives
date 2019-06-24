@@ -12,7 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index')->name('index');
 });
 
 Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/detective/{detective_slug}','DetectiveController@show')->name('show');
+Route::get('/detective/index', 'DetectiveController@index')->name('index');
+
+Route::get('/detective/{detective_slug}', 'DetectiveController@store')->name('store');
+Route::get('/detective/{detective_slug/crime', 'DetectiveController@create')->name('create');
+
+

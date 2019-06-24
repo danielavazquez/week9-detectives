@@ -1,4 +1,4 @@
-@extends('common/layout')
+@extends('layouts.app')
 
 @section('content')
 <div class="page page-detective">
@@ -28,7 +28,7 @@
         <h2>Hire a detective</h2>
 
         <form action="" method="post">
-
+            @csrf
             <input type="text" name="subject" placeholder="What crime has been commited?">
 
             <textarea name="description" placeholder="Thorough description"></textarea>
